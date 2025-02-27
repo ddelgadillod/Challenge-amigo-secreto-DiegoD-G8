@@ -7,7 +7,7 @@ let amigos = [];
 function agregarAmigo() {
     let amigoIngresado = document.getElementById('amigo').value
     if(!amigoIngresado){
-        alert("Ingrese un nombre de amigo valido");
+        alert("Por favor ingrese un nombre valido");
         return;
     }
     amigos.push(amigoIngresado);
@@ -39,7 +39,9 @@ function sortearAmigo(){
     let amigoSecreto = amigos[Math.floor(Math.random() * amigos.length)];
 
     let listaAmigoSecreto = document.getElementById("resultado");
-    listaAmigoSecreto.innerHTML = `El amigo secreto es ${amigoSecreto}`;
+    listaAmigoSecreto.innerHTML = `El amigo secreto sorteado es: ${amigoSecreto}`;
     let listaAmigos = document.getElementById("listaAmigos");
     listaAmigos.innerHTML = "";
 }
+
+
